@@ -1,6 +1,6 @@
 # Import the pygame library and initialise the game engine
 import pygame
-from codigo_fonte.utils.constant import *
+from codigo_fonte.utils.constantes import *
 
 
 def game_run():
@@ -28,9 +28,9 @@ def game_run():
 
         # --- Drawing code should go here
         # First, clear the screen to black.
-        screen.fill(BLACK)
+        screen.fill(COR_PRETO)
         # Draw the net
-        pygame.draw.line(screen, WHITE, [349, 0], [349, 500], 5)
+        pygame.draw.line(screen, COR_BRANCO, [349, 0], [349, 500], 5)
 
         # --- Go ahead and update the screen with what we've drawn.
         pygame.display.flip()

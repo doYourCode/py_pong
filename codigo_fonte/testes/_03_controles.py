@@ -1,6 +1,6 @@
 # Import the pygame library and initialise the game engine
 import pygame
-from codigo_fonte.utils.constant import *
+from codigo_fonte.utils.constantes import *
 
 
 class Paddle(pygame.sprite.Sprite):
@@ -13,8 +13,8 @@ class Paddle(pygame.sprite.Sprite):
         # Pass in the color of the paddle, its width and height.
         # Set the background color and set it to be transparent
         self.image = pygame.Surface([width, height])
-        self.image.fill(BLACK)
-        self.image.set_colorkey(BLACK)
+        self.image.fill(COR_PRETO)
+        self.image.set_colorkey(COR_PRETO)
 
         # Draw the paddle (a rectangle!)
         pygame.draw.rect(self.image, color, [0, 0, width, height])
@@ -43,11 +43,11 @@ def game_run():
     screen = pygame.display.set_mode(size)
     pygame.display.set_caption("Pong")
 
-    paddle_a = Paddle(WHITE, 10, 100)
+    paddle_a = Paddle(COR_BRANCO, 10, 100)
     paddle_a.rect.x = 20
     paddle_a.rect.y = 200
 
-    paddle_b = Paddle(WHITE, 10, 100)
+    paddle_b = Paddle(COR_BRANCO, 10, 100)
     paddle_b.rect.x = 670
     paddle_b.rect.y = 200
 
@@ -90,9 +90,9 @@ def game_run():
 
         # --- Drawing code should go here
         # First, clear the screen to black.
-        screen.fill(BLACK)
+        screen.fill(COR_PRETO)
         # Draw the net
-        pygame.draw.line(screen, WHITE, [349, 0], [349, 500], 5)
+        pygame.draw.line(screen, COR_BRANCO, [349, 0], [349, 500], 5)
 
         # Now let's draw all the sprites in one go. (For now we only have 2 sprites!)
         all_sprites_list.draw(screen)
